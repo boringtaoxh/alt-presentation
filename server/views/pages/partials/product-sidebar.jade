@@ -1,0 +1,50 @@
+#product-sidebar
+  .zoom
+    img#onzoom(src='/images/product2.jpg', data-zoom-image='/images/product2.jpg')
+    ul#gallery
+      li.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        a(href='#', data-image='/images/product1.jpg', data-zoom-image='/images/product1_big.jpg')
+          img#onzoom.img-responsive(ng-src='/images/product1_small.jpg')
+      li.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        a(href='#', data-image='/images/product2.jpg', data-zoom-image='/images/product2.jpg')
+          img#onzoom.img-responsive(ng-src='/images/product2_small.jpg')
+      li.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        a(href='#', data-image='/images/product3.jpg', data-zoom-image='/images/product3.jpg')
+          img#onzoom.img-responsive(ng-src='/images/product3_small.jpg')
+      li.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        a(href='#', data-image='/images/product4.jpg', data-zoom-image='/images/product4.jpg')
+          img#onzoom.img-responsive(ng-src='/images/product4_small.jpg')
+      li.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        a(href='#', data-image='/images/product5.jpg', data-zoom-image='/images/product5.jpg')
+          img#onzoom.img-responsive(ng-src='/images/product5_small.jpg')
+  .info
+    ul.parent
+      li Colour
+        ul.child
+          li Red
+          li Crystal
+          li Lime
+          li Milk
+    .clearfix
+    ul.parent.size
+      li Size
+        ul.child
+          li M - ø 6.4cm
+          li L - ø 7cm
+      li Quantity
+        button －
+        input(name='number', type='number', autocomplete='off')
+        button +
+    .row
+      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+        button.addtocart Add to Cart
+      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+        .smalllink
+          a.order-info(href='#') Shipping, Exchange & Refund
+          a.contact-info(href='#') Help & Contact
+      .clearfix
+
+script.
+  $("#onzoom").elevateZoom(
+    {gallery:'gallery', cursor: 'pointer', galleryActiveClass: 'active'}
+  );

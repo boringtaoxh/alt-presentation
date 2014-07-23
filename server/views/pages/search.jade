@@ -1,0 +1,22 @@
+.container-fluid.text-right
+  a(href="/products")
+    img.close.img-responsive(src='/images/follow_cross.png')
+#search-title
+  | Please type here for a lovely thing...
+label
+  input#search-input(type='text', ng-model='criteria' autofocus)
+#searches(ng-controller="productsCtrl")
+  ul 
+    li.col-xs-6.col-sm-4.col-md-3.col-lg-2(ng-repeat="search in searches | filter:criteria" ng-show="criteria.length >= 1") 
+      .col-xs-4.col-sm-4.col-md-4.col-lg-4
+        img.search-cover.img-responsive(ng-src="/{{search.image}}")
+      .search-info.col-xs-8.col-sm-8.col-md-8.col-lg-8
+        div.search-name
+          a(href="/product")
+           | {{search.name | cut:true:15:'...'}}
+        div
+          a(href="/brand/chapter/story")
+           | {{search.designer}}
+        div
+          | {{search.price | currency: "£"}}
+.clearfix

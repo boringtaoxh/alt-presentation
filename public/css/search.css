@@ -1,0 +1,45 @@
+.container-fluid a img {
+  margin: 20px;
+  margin-right: 0;
+  opcacity: 0.8;
+}
+#search-input {
+  background-color: transparent;
+  color: #908f8f;
+  float: left;
+  font: 700 100px/1.2 'PT Sans';
+  height: 120px;
+  padding-left: 10px;
+  position: absolute;
+  text-transform: uppercase;
+  width: 98%;
+  border: none;
+}
+#search-title {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 300;
+  margin-left: 1%;
+  margin-top: 0;
+}
+#searches {
+  width: 100%;
+  margin-top: 150px;
+  padding: 10px;
+}
+#searches img {
+  margin-bottom: 20px;
+  float: left;
+}
+.search-info {
+  padding-left: 15px;
+}
+.search-info div {
+  line-height: 1.7;
+}
+.search-info div a {
+  color: #000;
+}
+.search-info .search-name {
+  font: 700 1em/1.7 'PT Sans';
+}
